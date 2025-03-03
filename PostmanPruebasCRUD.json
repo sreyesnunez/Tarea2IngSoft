@@ -1,0 +1,236 @@
+{
+	"info": {
+		"_postman_id": "df27aafd-e167-45fa-9c9a-aaa91646aa08",
+		"name": "Pruebas CRUD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34879750"
+	},
+	"item": [
+		{
+			"name": "Todos los Usuarios",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "sebas",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "sebas@sebas.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/usuarios",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usuario por ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "sebas",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "sebas@sebas.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/usuarios/1",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"usuarios",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar Nuevo Usuario",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "sebas",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "sebas@sebas.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"PostMan\",\r\n  \"email\": \"PostMan@gmail.com\",\r\n  \"password\": \"Postman\",\r\n  \"rol\": \"ROLE_USER\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/usuarios",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Usuario",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Post Man Actualizado\",\r\n  \"email\": \"post@gmail.com\",\r\n  \"password\": \"post\",\r\n  \"rol\": \"ROLE_USER\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/usuarios/17",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"usuarios",
+						"17"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Quitar Usuario",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/usuarios/17",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"usuarios",
+						"17"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "sebas",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "sebas@sebas.com",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

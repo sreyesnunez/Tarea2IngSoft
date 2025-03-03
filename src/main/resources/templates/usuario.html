@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Perfil de Usuario</h1>
+        <div class="card mx-auto mt-4" style="max-width: 500px;">
+            <div class="card-body">
+                <h2 class="card-title">Información Personal</h2>
+                
+                <div th:if="${usuario != null}">
+                    <p class="card-text"><strong>Nombre:</strong> [[${usuario.nombre}]]</p>
+                    <p class="card-text"><strong>Email:</strong> [[${usuario.email}]]</p>
+                    <p class="card-text"><strong>Rol:</strong><span th:each="rol : ${usuario.roles}" th:text="${rol.nombre}"></span></p>                    
+                </div>
+
+                <div th:if="${usuario == null}">
+                    <p class="text-danger">No se encontró la información del usuario.</p>
+                    <a href="/login" class="btn btn-primary">Volver al login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
