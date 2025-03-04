@@ -12,6 +12,8 @@ services:
       MYSQL_PASSWORD: springpass
     ports:
       - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
     networks:
       - spring-network
 
@@ -22,7 +24,7 @@ services:
     depends_on:
       - mysql
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/springdb
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/springdb?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
       SPRING_DATASOURCE_USERNAME: springuser
       SPRING_DATASOURCE_PASSWORD: springpass
     ports:
@@ -33,3 +35,7 @@ services:
 networks:
   spring-network:
     driver: bridge
+
+volumes:
+  mysql_data:
+

@@ -53,7 +53,7 @@ Para ejecutar el proyecto en contenedores Docker, sigue estos pasos:
         docker ps
 
 3. **Abrir aplicación en el Navegador**
-        http://localhost:8080/
+        http://localhost:8080/login/
 
 4. **Para detener los contenedores**
         docker-compose down
@@ -66,23 +66,30 @@ Las pruebas de los endpoints de la API han sido documentadas y pueden ser ejecut
 
 Para importar la colección de pruebas en Postman:
 
-1. **Abre Postman**
+1. Abre Postman
 
-2. **Ve a File > Import**
+2. Ve a File > Import
 
-3. **Selecciona el archivo HolaSpring6CV3.postman_collection.json (proporcionado en este repositorio)**
+3. Selecciona el archivo HolaSpring6CV3.postman_collection.json (proporcionado en este repositorio)
 
-4. **Ejecuta las pruebas en la pestaña Collections**
+4. Ejecuta las pruebas en la pestaña Collections
+
+## 🔑 Credenciales de acceso
+Para probar la aplicación, puedes registrarte como usuario directamente en la API.
+Sin embargo, si deseas probar las operaciones CRUD como administrador, puedes usar las siguientes credenciales:
+
+**Usuario (Admin):** sebas@sebas.com
+**Contraseña:** sebas
 
 ## 🔎 Endpoints disponibles
 
 Algunos de los endpoints principales que puedes probar:
 
-**GET /api/usuarios → Obtiene la lista de usuarios**
+**GET /api/usuarios** → Obtiene la lista de usuarios
 
-**POST /api/usuarios → Crea un nuevo usuario (requiere body JSON)**
+**POST /api/usuarios** → Crea un nuevo usuario (requiere body JSON)
 
-**GET /api/roles → Lista de roles disponibles**
+**GET /api/roles** → Lista de roles disponibles
 
-**POST /api/login → Autenticación de usuario**
+**POST /api/login** → Autenticación de usuario
 
